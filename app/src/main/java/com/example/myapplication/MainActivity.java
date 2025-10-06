@@ -1,9 +1,12 @@
 package com.example.myapplication;
 
+import android.Manifest;
+import android.content.pm.PackageManager;
 import android.os.Bundle;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.core.content.ContextCompat;
 import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
@@ -21,4 +24,18 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
+
+    /*int  permissionCheck = ContextCompat.checkSelfPermission(thisActivity, Manifest.permission.CAMERA);
+
+    @Override
+    public void onRequestsermissionsResult(int requestCode, String permissions[], int [] grantResults) {
+        switch (requestCode) {
+            case MY_PERMISSIONS_CAMERA: {
+                if (grantResults.length >0 && grantResults[0] == PackageManager.PERMISSION_GRANTED) {
+                    //aceptado
+                } else {
+                    //denegado
+                }
+            }
+        }*/
 }
